@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anguka nayo cinemaz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-title">
+                <img src="Angukanayo.jpg" alt="Logo" class="logo">
+                <h1>Anguka nayo cinemaz</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#movies">Movies</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2>Home</h2>
+            <div class="slideshow-container">
+                <!-- Slides will be inserted here by JavaScript -->
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About</h2>
+            <div class="about-content">
+                <img src="Angukanayo.jpg" alt="Angukanayo Cinemaz Logo" class="about-logo">
+            <p>Welcome to angukanayo cinemaz, your go-to destination for an unparalleled movie experience. Our theatre features a wide range of movies, from classics to the latest blockbusters. Enjoy our comfortable seating, top-notch sound system, and a delightful selection of snacks. We are committed to providing you with an exceptional cinematic journey.</p>
+        </div>
+        </section>
+
+        <section id="movies">
+            <h2>Movies</h2>
+            <form id="add-movie-form">
+                <h3>Add Movie</h3>
+                <input type="text" id="title" placeholder="Title" required>
+                <input type="number" id="runtime" placeholder="Runtime" required>
+                <input type="number" id="capacity" placeholder="Capacity" required>
+                <input type="text" id="showtime" placeholder="Showtime" required>
+                <input type="number" id="tickets_sold" placeholder="Tickets Sold" required>
+                <input type="text" id="description" placeholder="Description" required>
+                <input type="text" id="poster" placeholder="Poster URL" required>
+                <button type="submit">Add Movie</button>
+            </form>
+            <div id="movies-container"></div>
+        </section>
+    </main>
+
+    <!-- The Modal -->
+    <div id="updateModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form id="update-movie-form">
+                <h3>Update Movie</h3>
+                <input type="hidden" id="update-movie-id">
+                <input type="text" id="update-title" placeholder="Title" required>
+                <input type="number" id="update-runtime" placeholder="Runtime" required>
+                <input type="number" id="update-capacity" placeholder="Capacity" required>
+                <input type="text" id="update-showtime" placeholder="Showtime" required>
+                <input type="number" id="update-tickets_sold" placeholder="Tickets Sold" required>
+                <input type="text" id="update-description" placeholder="Description" required>
+                <input type="text" id="update-poster" placeholder="Poster URL" required>
+                <button type="submit">Update Movie</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Angukanayo Cinemaz. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

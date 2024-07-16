@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure full height of viewport */
+    background-color: #f2f2f2; /* Example background color */
+}
+
+header {
+    background-color: #3498db; /* Light blue */
+    padding: 1em;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 70px; /* Adjust logo height */
+    margin-right: 10px;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1em;
+}
+
+.nav-links a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+h2{
+    text-align: center;
+}
+
+main {
+    padding: 1em;
+}
+
+section {
+    margin-bottom: 2em;
+}
+
+form {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 1em;
+    border-radius: 5px;
+}
+
+#add-movie-form input,
+#add-movie-form textarea,
+#add-movie-form button,
+#update-movie-form input,
+#update-movie-form textarea,
+#update-movie-form button {
+    display: block;
+    margin: 0.5em 0;
+    padding: 0.5em;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#movies-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: space-between;
+}
+
+.movie {
+    border: 1px solid #ccc;
+    padding: 1em;
+    width: calc(25% - 1em); /* 4 movies per row */
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.movie img {
+    width: 100%;
+    height: auto;
+    max-width: 100%; /* Ensure image fits container */
+    max-height: 300px; /* Set max-height to ensure consistency */
+    display: block;
+    margin: 0 auto;
+}
+
+button.delete-button {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5em;
+    cursor: pointer;
+}
+
+button.update-button {
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5em;
+    cursor: pointer;
+}
+
+/* Media Queries for responsive design */
+@media (max-width: 1200px) {
+    .movie {
+        width: calc(33.333% - 1em); /* 3 movies per row */
+    }
+}
+
+@media (max-width: 900px) {
+    .movie {
+        width: calc(50% - 1em); /* 2 movies per row */
+    }
+}
+
+@media (max-width: 600px) {
+    .movie {
+        width: 100%; /* 1 movie per row */
+    }
+}
+
+/* Modal styles */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.4); /* Semi-transparent background */
+    padding-top: 60px; 
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Slideshow styles */
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+}
+
+.slideshow-container img {
+    width: 100%;
+    height: auto;
+}
+
+.mySlides {
+    display: none;
+}
+.mySlides img {
+    max-width: 100%;
+    max-height: 700px; /* Adjust the max-height as needed */
+    display: block;
+    margin: 0 auto;
+}
+
+footer {
+    background-color: #3498db; /* Light blue background color */
+    color: white;
+    text-align: center;
+    padding: 1em;
+    margin-top: auto; /* Push footer to bottom */
+}
+/* CSS for About Section */
+#about {
+    text-align: center;
+    padding: 2em;
+    background-color: #f9f9f9;
+}
+
+.about-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.about-logo {
+    display: block;
+    margin: 0 auto 1em; /* Center the logo vertically and horizontally */
+    max-width: 100%;
+    height: auto;
+}
+
+#about p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
